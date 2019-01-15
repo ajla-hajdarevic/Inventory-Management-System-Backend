@@ -1,10 +1,7 @@
 package com.example.pokusaj100.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -13,7 +10,10 @@ public class Product {
     @GeneratedValue
     private int id;
     private String prodName;
-    private String supplier;
+
+    @ManyToOne
+    @JoinColumn(name = "supplier_id")
+    private Supplier supplier;
     private String prodType;
     private double price;
     private int quantity;
@@ -35,11 +35,11 @@ public class Product {
         this.prodName = prodName;
     }
 
-    public String getSupplier() {
+    public Supplier getSupplier() {
         return supplier;
     }
 
-    public void setSupplier(String supplier) {
+    public void setSupplier(Supplier supplier) {
         this.supplier = supplier;
     }
 
