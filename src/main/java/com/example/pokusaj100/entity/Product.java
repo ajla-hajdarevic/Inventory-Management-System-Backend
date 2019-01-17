@@ -11,13 +11,13 @@ public class Product {
     private int id;
     private String prodName;
 
-    @ManyToOne
+
+    @ManyToOne(targetEntity = Supplier.class)
     @JoinColumn(name = "supplier_id")
     private Supplier supplier;
     private String prodType;
     private double price;
     private int quantity;
-    private boolean status;
 
     public int getId() {
         return id;
@@ -67,11 +67,4 @@ public class Product {
         this.quantity = quantity;
     }
 
-    public boolean isStatus() {
-        return status;
-    }
-
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
 }
