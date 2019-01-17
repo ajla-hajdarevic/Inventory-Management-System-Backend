@@ -6,15 +6,14 @@ import javax.persistence.*;
 @Entity
 public class Product {
 
+
     @Id
     @GeneratedValue
     private int id;
     private String prodName;
 
+    private int supplierId;
 
-    @ManyToOne(targetEntity = Supplier.class)
-    @JoinColumn(name = "supplier_id")
-    private Supplier supplier;
     private String prodType;
     private double price;
     private int quantity;
@@ -35,12 +34,12 @@ public class Product {
         this.prodName = prodName;
     }
 
-    public Supplier getSupplier() {
-        return supplier;
+    public int getSupplierId() {
+        return supplierId;
     }
 
-    public void setSupplier(Supplier supplier) {
-        this.supplier = supplier;
+    public void setSupplierId(int supplierId) {
+        this.supplierId = supplierId;
     }
 
     public String getProdType() {
@@ -66,5 +65,4 @@ public class Product {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
 }
