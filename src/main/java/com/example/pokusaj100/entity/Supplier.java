@@ -1,8 +1,8 @@
 package com.example.pokusaj100.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 public class Supplier {
@@ -14,6 +14,7 @@ public class Supplier {
     private String email;
     private int phoneNumber;
     private String address;
+
 
     public int getId() {
         return id;
