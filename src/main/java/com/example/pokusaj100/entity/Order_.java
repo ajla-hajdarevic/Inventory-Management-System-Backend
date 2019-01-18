@@ -13,10 +13,10 @@ public class Order_ {
     @GeneratedValue
     private int id;
 
-    private boolean paid;
     private int totalCost;
 
-    private Date orderDate;
+    private String orderDate;
+
 
     public int getId() {
         return id;
@@ -24,14 +24,6 @@ public class Order_ {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public boolean isPaid() {
-        return paid;
-    }
-
-    public void setPaid(boolean paid) {
-        this.paid = paid;
     }
 
     public int getTotalCost() {
@@ -42,11 +34,11 @@ public class Order_ {
         this.totalCost = totalCost;
     }
 
-    public Date getOrderDate() {
+    public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
 }

@@ -15,7 +15,7 @@ public class Sale {
     private boolean paid;
     private int totalUnits;
     private int totalPrice;
-    private Date salesDate;
+    private String salesDate;
 
     public int getId() {
         return id;
@@ -49,11 +49,11 @@ public class Sale {
         this.totalPrice = totalPrice;
     }
 
-    public Date getSalesDate() {
+    public String getSalesDate() {
         return salesDate;
     }
 
-    public void setSalesDate(Date salesDate) {
+    public void setSalesDate(String salesDate) {
         this.salesDate = salesDate;
     }
 }
