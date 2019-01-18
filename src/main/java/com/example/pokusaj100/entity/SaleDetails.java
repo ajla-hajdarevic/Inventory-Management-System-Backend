@@ -8,13 +8,35 @@ public class SaleDetails {
     @GeneratedValue
     private int id;
 
-    @ManyToOne
-    @JoinColumn(name = "sale_id")
-    private Sale sale;
+    private int saleId;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id")
-    private Product product;
+   private int productId;
+
+    private int soldQuantity;
+
+    public int getSoldQuantity() {
+        return soldQuantity;
+    }
+
+    public void setSoldQuantity(int soldQuantity) {
+        this.soldQuantity = soldQuantity;
+    }
+
+    public int getSaleId() {
+        return saleId;
+    }
+
+    public void setSaleId(int saleId) {
+        this.saleId = saleId;
+    }
+
+    public int getProductId() {
+        return productId;
+    }
+
+    public void setProductId(int productId) {
+        this.productId = productId;
+    }
 
     public int getId() {
         return id;
@@ -24,19 +46,4 @@ public class SaleDetails {
         this.id = id;
     }
 
-    public Sale getSale() {
-        return sale;
-    }
-
-    public void setSale(Sale sale) {
-        this.sale = sale;
-    }
-
-    public Product getProduct() {
-        return product;
-    }
-
-    public void setProduct(Product product) {
-        this.product = product;
-    }
 }
